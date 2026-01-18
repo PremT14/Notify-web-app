@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notify</title>
+    <meta name="description" content="Capture your thoughts in style with Lumina Notes.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1><i class="fa-solid fa-note-sticky"></i> Notify </h1>
+            <p>Capture ideas instantly.</p>
+        </header>
+
+        <section class="input-section">
+            <div class="glass-card input-wrapper">
+                <input type="text" id="note-title" placeholder="Note Title" autocomplete="off">
+                <textarea id="note-body" placeholder="Write your note here..." rows="4"></textarea>
+                <div class="form-actions">
+                    <button id="cancel-btn" class="secondary-btn hidden">
+                        <i class="fa-solid fa-xmark"></i> Cancel
+                    </button>
+                    <button id="add-btn" class="primary-btn">
+                        <i class="fa-solid fa-plus"></i> Add Note
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <div id="notes-grid" class="notes-grid">
+                <!-- Notes will be injected here via JS -->
+            </div>
+            <div id="empty-state" class="empty-state hidden">
+                <i class="fa-regular fa-clipboard"></i>
+                <p>No notes yet. Start writing!</p>
+            </div>
+        </section>
+
+        <div id="toast" class="toast hidden">Note Added!</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
